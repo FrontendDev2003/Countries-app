@@ -9,7 +9,7 @@ function CountryDetail() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    axios.get(`https://restcountries.com/v3.1/name/${name}`)
+    axios.get(`https://cors-anywhere.herokuapp.com/https://restcountries.com/v3.1/name/${name}`)
       .then(response => {
         setCountry(response.data[0]);
         setLoading(false);
