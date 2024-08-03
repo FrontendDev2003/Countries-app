@@ -8,7 +8,8 @@ function CountryList() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    axios.get('https://restcountries.com/v3.1/all')
+    // Using CORS proxy for debugging
+    axios.get('https://cors-anywhere.herokuapp.com/https://restcountries.com/v3.1/all')
       .then(response => {
         setCountries(response.data);
         setLoading(false);
