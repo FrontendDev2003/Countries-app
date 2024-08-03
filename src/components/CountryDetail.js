@@ -9,7 +9,11 @@ function CountryDetail() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    axios.get(`https://cors-anywhere.herokuapp.com/https://restcountries.com/v3.1/name/${name}`)
+    const apiUrl = process.env.NODE_ENV === 'production' 
+      ? `https://restcountries.com/v3.1/name/${name}` 
+      : `/v3.1/name/${name}`;
+
+    axios.get(apiUrl)
       .then(response => {
         setCountry(response.data[0]);
         setLoading(false);
