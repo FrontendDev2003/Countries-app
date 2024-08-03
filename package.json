@@ -2,7 +2,7 @@
   "name": "countries-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://frontenddev2003.github.io/Countries-app",
+  "homepage": "https://FrontendDev2003.github.io/Countries-app",
   "proxy": "https://restcountries.com",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
